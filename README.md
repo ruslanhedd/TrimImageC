@@ -13,9 +13,7 @@ There’s no full graphical UI — only standard system dialogs and a simple int
 
 - Select image files using native Windows "Open File" dialog
 - Preview image in a minimal resizable window
-- Select crop region using mouse
-- Save the cropped image via "Save File" dialog
-- Supports `.jpg`, `.png`, `.bmp`, and other common formats
+- Supports `.jpg`, `.png` for sure
 - Powered by:
   - `stb_image.h` (image loading)
   - `stb_image_write.h` (image saving)
@@ -37,7 +35,7 @@ There’s no full graphical UI — only standard system dialogs and a simple int
 
 ### 🧱 Build Command
 
-```
+```bash
 g++ main.cpp -o image_trimmer_gui.exe -Iinclude -std=c++17 -Wall -O2 -lm -lcomdlg32 -static
 ```
 
@@ -45,14 +43,17 @@ This produces a statically-linked `.exe` that can run standalone on most Windows
 
 ---
 
-## 🚀 Usage
+### 🛠️ How to Use
 
-1. Run the compiled `image_trimmer_gui.exe` from the terminal or file explorer.
-2. A file picker will appear – choose an image.
-3. A window opens showing the image.
-4. Use the mouse to drag-select the crop area.
-5. After releasing the mouse, a "Save As" dialog will appear.
-6. Save the cropped image to your desired location.
+1. Run the compiled `image_trimmer_gui.exe` from the terminal or file explorer.  
+2. A file picker dialog will appear — select one or more image files.  
+3. The program will open each selected image one by one.  
+4. For each image:  
+   - A window will appear showing the image.  
+   - Use the mouse to **drag-select** the crop area.  
+   - Once you release the mouse, the image is cropped accordingly.  
+5. The cropped version of each image is automatically saved to an `output/` folder located in the **same directory** as the original image.  
+6. The file name remains the same as the original.
 
 ---
 
@@ -83,3 +84,5 @@ You are free to use, modify, and distribute this code without restriction.
 - Windows API documentation
 
 ---
+
+```
