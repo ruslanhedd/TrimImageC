@@ -37,7 +37,7 @@ There’s no full graphical UI — only standard system dialogs and a simple int
 
 ### 🧱 Build Command
 
-```bash
+```
 g++ main.cpp -o image_trimmer_gui.exe -Iinclude -std=c++17 -Wall -O2 -lm -lcomdlg32 -static
 ```
 
@@ -83,5 +83,3 @@ You are free to use, modify, and distribute this code without restriction.
 - Windows API documentation
 
 ---
-
-```
